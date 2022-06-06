@@ -24,6 +24,11 @@ h6{
     font-weight: 700;
     font-size: 12px;
 }
+.zdanie{
+    padding-top: 20px;
+    text-align: center;
+    font-size: x-large;
+}
 p{
     font-size:16px;
     color:#465b52;
@@ -46,6 +51,9 @@ body{
     background: lightsteelblue;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
     z-index: 999;
+    position: sticky;
+    top: 0;
+    left:0;
 
 }
 #logo{
@@ -117,3 +125,94 @@ body{
     font-size: 15px;
 
 }
+#link {
+    background-image:url("img/button.png") ;
+    background-color: transparent;
+    color:cornflowerblue;
+    border: 0;
+    padding: 20px 80px 20px 80px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight:700 ;
+    font-size: 15px;
+    text-decoration: none;
+}
+#box{
+    margin-left: 200px;
+    display: flex;
+    height:450px;
+    width: 1000px;
+    overflow-x: scroll;
+    overflow-y: unset;
+    scroll-behavior: smooth;
+
+}
+
+
+#box .fa-box{
+    : right;
+    width: 400px;
+    max-height: 300px;
+    text-align: center;
+    padding: 25px 15px ;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border-radius: 4px;
+    margin: 1px 0;
+    transition: transform .2s;
+}
+#box .fa-box:hover{
+    transform: scale(1.5);
+    box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}
+#box .fa-box img{
+
+    width: 100%;
+    margin-bottom: 10px;
+}
+#box .fa-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#5c7b78;
+    background-color: lightcyan;
+}
+
+#box .fa-box:nth-child(2) h6{
+    background-color:#cdebbc ;
+
+}
+#box .fa-box:nth-child(3) h6{
+    background-color:#dfcddf ;
+
+}
+#box .fa-box:nth-child(4) h6{
+    background-color:#d3eec1 ;
+
+}
+#box .fa-box:nth-child(5) h6{
+    background-color:#f6ecf3 ;
+
+}
+#box .fa-box:nth-child(6) h6{
+    background-color:#ffbc2e ;
+
+}
+#box .fa-box:nth-child(7) h6{
+    background-color:#e1cae1 ;
+
+}
+#box .fa-box:nth-child(8) h6{
+    background-color:#cca16e ;
+
+}
+#box .fa-box:nth-child(9) h6{
+    background-color:#90d8d1 ;
+
+}
+#box .fa-box:nth-child(10) h6{
+    background-color:#c67da4 ;
+
+}
+
+
