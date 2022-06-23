@@ -15,6 +15,7 @@ h2{
     font-size:46px;
     line-height: 54px;
     color: #222;
+
 }
 h4{
     font-size:20px;
@@ -59,6 +60,7 @@ body{
 #logo{
     height: 150px;
     width: auto;
+    text-align: center;
 }
 #bar{
     display: flex;
@@ -70,9 +72,8 @@ body{
 #bar li{
     list-style: none;
     padding: 0 40px ;
-
     position: relative;
-    right: 400px;
+    left:550px
 }
 #bar li a{
     text-decoration: none;
@@ -98,7 +99,7 @@ body{
 }
 
 #hero{
-    background-image:url("img/tlo.jpg");
+    background-image:url("img/tlo.png");
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -138,7 +139,7 @@ body{
     text-decoration: none;
 }
 #box{
-    margin-left: 200px;
+    margin-left: 22%;
     display: flex;
     height:450px;
     width: 1000px;
@@ -214,5 +215,7 @@ body{
     background-color:#c67da4 ;
 
 }
+
+
 
 
