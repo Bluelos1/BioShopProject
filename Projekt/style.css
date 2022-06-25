@@ -16,6 +16,7 @@ h2{
     line-height: 54px;
     color: #222;
 
+
 }
 h4{
     font-size:20px;
@@ -146,6 +147,7 @@ body{
     overflow-x: scroll;
     overflow-y: unset;
     scroll-behavior: smooth;
+    text-align: center;
 
 }
 
@@ -178,43 +180,24 @@ body{
     color:#5c7b78;
     background-color: lightcyan;
 }
-
-#box .fa-box:nth-child(2) h6{
-    background-color:#cdebbc ;
-
+.prod{
+    border-style: groove;
+    border-radius: 2px;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    align-items: center;
+    justify-content: center;
 }
-#box .fa-box:nth-child(3) h6{
-    background-color:#dfcddf ;
-
+.prod1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
 }
-#box .fa-box:nth-child(4) h6{
-    background-color:#d3eec1 ;
 
-}
-#box .fa-box:nth-child(5) h6{
-    background-color:#f6ecf3 ;
 
-}
-#box .fa-box:nth-child(6) h6{
-    background-color:#ffbc2e ;
 
-}
-#box .fa-box:nth-child(7) h6{
-    background-color:#e1cae1 ;
-
-}
-#box .fa-box:nth-child(8) h6{
-    background-color:#cca16e ;
-
-}
-#box .fa-box:nth-child(9) h6{
-    background-color:#90d8d1 ;
-
-}
-#box .fa-box:nth-child(10) h6{
-    background-color:#c67da4 ;
-
-}
 
 
 

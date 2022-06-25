@@ -42,28 +42,31 @@ spl_autoload_register(function ($opinia) {
 <?php
 
 $produkt=mysqli_fetch_assoc($select);
-    echo '<img src = "'.$produkt['img'].'"width=200px>
+    echo '<div class = "prod1">
+    <img src = "'.$produkt['img'].'"width=200px>
     <h1>'.$produkt['nazwa'].'</h1>
-    <h2>'.$produkt['cena_bez_dostawy'].'zł</h2>
-    
+    <h2>Cena bez dostawy: '.$produkt['cena_bez_dostawy'].'zł</h2>
+    <h2>Cena z dostawy: '.$produkt['cena_z_dostawa'].'zł</h2>
+    <h4>Opis szczegółowy: '.$produkt['opis_duzy'].'</h4>
+    </div>
     ';
 
 
 ?>
 
-<form method="post" >
+<form method="post" class = "prod1">
     <h2>opinia:</h2>
-    <input type="text" name="opinia">
+    <input type="text" required name="opinia">
     <h2>ocena:</h2>
-    <input type="number" name="ocena">
+    <input type="number" required name="ocena" min="1" max="5">
     <input type="submit" name="submit">
 </form>
 <?php
-echo'<h1>Opinie uzytkownikow:</h1>';
+echo'<h3 class="prod1">Opinie uzytkownikow:</h3>';
 while($produkt1=mysqli_fetch_assoc($wysopinia)){
-    echo'<h1>'.$osoba['name'].'</h1>';
-    echo'<h1>'.$produkt1['tresc'].'</h1>';
-    echo'<h1>'.$produkt1['ocena'].'</h1>';
+    echo'<div class="prod"> <h4 class="prod1">'.$osoba['name'].'</h4>
+    <h4 class="prod1">'.$produkt1['tresc'].'</h4>
+    <h4 class="prod1">Ocena:'.$produkt1['ocena'].'/5</h4></div>';
 }
 ?>
 </body>

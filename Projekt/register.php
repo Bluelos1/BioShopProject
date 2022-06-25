@@ -24,15 +24,15 @@ if(isset($_POST['submit'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="style1.css">
 
 </head>
 <body>
@@ -47,17 +47,18 @@ if(isset($message)){
 
 <div class="form-container">
 
-    <form action="" method="post">
-        <h3>register now</h3>
-        <input type="text" name="name" required placeholder="enter username" class="box">
-        <input type="email" name="email" required placeholder="enter email" class="box">
-        <input type="password" name="password" required placeholder="enter password" class="box">
-        <input type="password" name="cpassword" required placeholder="confirm password" class="box">
-        <input type="submit" name="submit" class="btn" value="register now">
-        <p>already have an account? <a href="login.php">login now</a></p>
+    <form action="" method="post" class="registerbtn" >
+        <h3>Zarejestruj się</h3>
+        <input type="text" name="name" required placeholder="Wprowadź nazwe użytkownika" class="box">
+        <input type="email" name="email" required placeholder="Wprowadź email" class="box">
+        <input type="password" name="password" required placeholder="Wprowadź hasło" class="box">
+        <input type="password" name="cpassword" required placeholder="Potwierdź hasło" class="box">
+        <input type="submit" name="submit" class="btn" value="Zarejestruj się">
+
     </form>
 
 </div>
+<p class="box">Masz już konto?<a href="login.php"> zaloguj sie</a></p>
 
 </body>
 </html>
