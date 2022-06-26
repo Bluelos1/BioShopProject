@@ -2,23 +2,35 @@
 
 include 'config.php';
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit'])) {
+    $uppercase = preg_match ( '@[A-Z]@',$_POST[ 'password' ] );
+    $lowercase = preg_match ( '@[a-z]@',$_POST[ 'password' ] );
+    $number = preg_match ( '@[0-9]@',$_POST[ 'password' ] );
+    $specialChars = preg_match ( '@[^\w]@',$_POST[ 'password' ] );
 
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
-    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
+    if ( !$uppercase || !$lowercase || !$number || !$specialChars || strlen ( $_POST[ 'password' ] ) < 8 ) {
+        echo '<div class="alert alert-warning" style="text-align: center">
+                    <strong>Słabe hasło musi mieć 8 liter,znak specialny i conajmniej jedna liczbe</strong> 
+            </div>';
+    } else {
 
-    $select = mysqli_query($conn, "SELECT * FROM `user_info` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
-    if(mysqli_num_rows($select) > 0){
-        $message[] = 'user already exist!';
-    }else{
-        mysqli_query($conn, "INSERT INTO `user_info`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
-        $message[] = 'registered successfully!';
-        header('location:login.php');
+        $name = mysqli_real_escape_string ( $conn,$_POST[ 'name' ] );
+        $email = mysqli_real_escape_string ( $conn,$_POST[ 'email' ] );
+        $pass = mysqli_real_escape_string ( $conn,md5 ( $_POST[ 'password' ] ) );
+        $cpass = mysqli_real_escape_string ( $conn,md5 ( $_POST[ 'cpassword' ] ) );
+
+        $select = mysqli_query ( $conn,"SELECT * FROM `user_info` WHERE email = '$email' AND password = '$pass'" ) or die( 'query failed' );
+
+        if ( mysqli_num_rows ( $select ) > 0 ) {
+            $message[] = 'user already exist!';
+        } else {
+            mysqli_query ( $conn,"INSERT INTO `user_info`(name, email, password) VALUES('$name', '$email', '$pass')" ) or die( 'query failed' );
+            $message[] = 'registered successfully!';
+            header ( 'location:login.php' );
+        }
+
     }
-
 }
 
 ?>

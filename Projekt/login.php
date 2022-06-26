@@ -13,9 +13,10 @@ if(isset($_POST['submit'])){
     if(mysqli_num_rows($select) > 0){
         $row = mysqli_fetch_assoc($select);
         $_SESSION['id'] = $row['id'];
+        $_SESSION['email']=$row['email'];
         header('location:Sklep_z_jedzeniem.php');
     }else{
-        $message[] = 'Niepoprawne hasło lub email';
+        $message[] = '<div class = "prod">Niepoprawne hasło lub email</div>';
     }
 
 }

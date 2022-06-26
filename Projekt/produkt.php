@@ -8,6 +8,7 @@ class produkt{
     private $opis;
     private $rodzaj;
     private $ocena;
+    private $stan;
 
     /**
      * @param $img
@@ -19,7 +20,7 @@ class produkt{
      * @param $rodzaj
      * @param $ocena
      */
-    public function __construct($img, $nazwa, $cena_z_dostawa, $cena_bez_dostawy, $opis_duzy, $opis, $rodzaj, $ocena)
+    public function __construct($img, $nazwa, $cena_z_dostawa, $cena_bez_dostawy, $opis_duzy, $opis, $rodzaj, $ocena,$stan)
     {
         $this->img = $img;
         $this->nazwa = $nazwa;
@@ -29,10 +30,11 @@ class produkt{
         $this->opis = $opis;
         $this->rodzaj = $rodzaj;
         $this->ocena = $ocena;
+        $this->stan = $stan;
     }
     public function add(){
         include 'config.php';
-        $insert = "INSERT INTO products  (img, nazwa, cena_z_dostawa, cena_bez_dostawy, opis_duzy, opis, rodzaj, ocena) VALUES ('$this->img','$this->nazwa','$this->cena_z_dostawa','$this->cena_bez_dostawy','$this->opis_duzy','$this->opis_duzy','$this->opis','$this->rodzaj','$this->ocena')";
+        $insert = "INSERT INTO products  (img, nazwa, cena_z_dostawa, cena_bez_dostawy, opis_duzy, opis, rodzaj, ocena,stan) VALUES ('$this->img','$this->nazwa','$this->cena_z_dostawa','$this->cena_bez_dostawy','$this->opis_duzy','$this->opis_duzy','$this->opis','$this->rodzaj','$this->ocena','$this->stan')";
         $conn -> query($insert);
     }
 

@@ -195,6 +195,21 @@ body{
     justify-content: center;
     padding-top: 2%;
 }
+.prod2{
+    border-style: groove;
+    border-radius: 2px;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    align-items: center;
+
+
+}
+.ccc{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
 
 
 
